@@ -1,33 +1,4 @@
-Без Global Relabel
-Results of test: test_1.txt is 935 Время:0.0039819 seconds 
-Results of test: test_2.txt is 2789 Время:2.11e-05 seconds 
-Results of test: test_3.txt is 2e+06 Время:4.7e-06 seconds 
-Results of test: test_4.txt is 23 Время:1.31e-05 seconds 
-Results of test: test_5.txt is 256 Время:0.0002866 seconds 
-Results of test: test_6.txt is 523 Время:0.000162 seconds 
-Results of test: test_d1.txt is 171 Время:0.0012671 seconds 
-Results of test: test_d2.txt is 8023 Время:0.0005228 seconds 
-Results of test: test_d3.txt is 9078 Время:0.0190614 seconds 
-Results of test: test_d4.txt is 9072 Время:0.0483909 seconds 
-Results of test: test_d5.txt is 3278 Время:1.13e-05 seconds 
-Results of test: test_rd01.txt is 24080 Время:3.34e-05 seconds 
-Results of test: test_rd02.txt is 37897 Время:0.0001536 seconds 
-Results of test: test_rd03.txt is 68537 Время:0.0025037 seconds 
-Results of test: test_rd04.txt is 62599 Время:0.0038447 seconds 
-Results of test: test_rd05.txt is 153728 Время:0.314243 seconds 
-Results of test: test_rd06.txt is 224507 Время:0.493507 seconds 
--
-Results of test: test_rl01.txt is 15966 Время:3.97e-05 seconds 
-Results of test: test_rl02.txt is 36865 Время:7.17e-05 seconds 
-Results of test: test_rl03.txt is 63681 Время:0.0025585 seconds 
-Results of test: test_rl04.txt is 55434 Время:0.0002388 seconds 
-Results of test: test_rl05.txt is 138688 Время:0.0018477 seconds 
-Results of test: test_rl06.txt is 141131 Время:0.0027034 seconds 
-Results of test: test_rl07.txt is 204082 Время:0.0073337 seconds 
-Results of test: test_rl08.txt is 211102 Время:0.0077171 seconds 
-Results of test: test_rl09.txt is 218990 Время:0.0070616 seconds 
-Results of test: test_rl10.txt is 482613 Время:0.248323 seconds 
-
+Работу выполнил: Салихов Марат Ахатович
 
 Global Relabel каждые 30 вершин
 Results of test: test_1.txt is 935 Время:1.12e-05 seconds
@@ -47,6 +18,7 @@ Results of test: test_rd03.txt is 68537 Время:0.0010973 seconds
 Results of test: test_rd04.txt is 62599 Время:0.0021384 seconds
 Results of test: test_rd05.txt is 153728 Время:0.136989 seconds
 Results of test: test_rd06.txt is 224507 Время:1.20051 seconds
+rd07-
 Results of test: test_rl01.txt is 15966 Время:5.77e-05 seconds
 Results of test: test_rl02.txt is 36865 Время:0.000225 seconds
 Results of test: test_rl03.txt is 63681 Время:0.001511 seconds
@@ -56,6 +28,7 @@ Results of test: test_rl06.txt is 141131 Время:0.0817455 seconds
 Results of test: test_rl07.txt is 204082 Время:0.583264 seconds
 Results of test: test_rl08.txt is 211102 Время:0.59631 seconds
 Results of test: test_rl09.txt is 218990 Время:0.508674 seconds
+rl10-
 
 
 Global Relabel каждые 10000 вершин:
@@ -79,9 +52,6 @@ Results of test: test_rd05.txt is 153728 Время:0.0292603 seconds
 Results of test: test_rd06.txt is 224507 Время:0.173138 seconds
 Results of test: test_rd07.txt is 730313 Время:52.4489 seconds
 Results of test: test_rl01.txt is 15966 Время:5.55e-05 seconds
-Салихов Марат Ахатович
-
-
 Results of test: test_rl02.txt is 36865 Время:7.34e-05 seconds
 Results of test: test_rl03.txt is 63681 Время:0.0027443 seconds
 Results of test: test_rl04.txt is 55434 Время:0.0002729 seconds
