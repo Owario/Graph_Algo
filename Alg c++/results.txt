@@ -1,0 +1,131 @@
+Без Global Relabel
+Results of test: test_1.txt is 935 Время:0.0039819 seconds 
+Results of test: test_2.txt is 2789 Время:2.11e-05 seconds 
+Results of test: test_3.txt is 2e+06 Время:4.7e-06 seconds 
+Results of test: test_4.txt is 23 Время:1.31e-05 seconds 
+Results of test: test_5.txt is 256 Время:0.0002866 seconds 
+Results of test: test_6.txt is 523 Время:0.000162 seconds 
+Results of test: test_d1.txt is 171 Время:0.0012671 seconds 
+Results of test: test_d2.txt is 8023 Время:0.0005228 seconds 
+Results of test: test_d3.txt is 9078 Время:0.0190614 seconds 
+Results of test: test_d4.txt is 9072 Время:0.0483909 seconds 
+Results of test: test_d5.txt is 3278 Время:1.13e-05 seconds 
+Results of test: test_rd01.txt is 24080 Время:3.34e-05 seconds 
+Results of test: test_rd02.txt is 37897 Время:0.0001536 seconds 
+Results of test: test_rd03.txt is 68537 Время:0.0025037 seconds 
+Results of test: test_rd04.txt is 62599 Время:0.0038447 seconds 
+Results of test: test_rd05.txt is 153728 Время:0.314243 seconds 
+Results of test: test_rd06.txt is 224507 Время:0.493507 seconds 
+-
+Results of test: test_rl01.txt is 15966 Время:3.97e-05 seconds 
+Results of test: test_rl02.txt is 36865 Время:7.17e-05 seconds 
+Results of test: test_rl03.txt is 63681 Время:0.0025585 seconds 
+Results of test: test_rl04.txt is 55434 Время:0.0002388 seconds 
+Results of test: test_rl05.txt is 138688 Время:0.0018477 seconds 
+Results of test: test_rl06.txt is 141131 Время:0.0027034 seconds 
+Results of test: test_rl07.txt is 204082 Время:0.0073337 seconds 
+Results of test: test_rl08.txt is 211102 Время:0.0077171 seconds 
+Results of test: test_rl09.txt is 218990 Время:0.0070616 seconds 
+Results of test: test_rl10.txt is 482613 Время:0.248323 seconds 
+
+
+Global Relabel каждые 30 вершин
+Results of test: test_1.txt is 935 Время:1.12e-05 seconds
+Results of test: test_2.txt is 2789 Время:1.91e-05 seconds
+Results of test: test_3.txt is 2e+06 Время:3.1e-06 seconds
+Results of test: test_4.txt is 23 Время:8.89e-05 seconds
+Results of test: test_5.txt is 256 Время:5.29e-05 seconds
+Results of test: test_6.txt is 523 Время:0.0002727 seconds
+Results of test: test_d1.txt is 171 Время:0.0005253 seconds
+Results of test: test_d2.txt is 8023 Время:0.0003564 seconds
+Results of test: test_d3.txt is 9078 Время:0.0174272 seconds
+Results of test: test_d4.txt is 9072 Время:0.247672 seconds
+Results of test: test_d5.txt is 3278 Время:1.02e-05 seconds
+Results of test: test_rd01.txt is 24080 Время:6.94e-05 seconds
+Results of test: test_rd02.txt is 37897 Время:0.0002334 seconds
+Results of test: test_rd03.txt is 68537 Время:0.0010973 seconds
+Results of test: test_rd04.txt is 62599 Время:0.0021384 seconds
+Results of test: test_rd05.txt is 153728 Время:0.136989 seconds
+Results of test: test_rd06.txt is 224507 Время:1.20051 seconds
+Results of test: test_rl01.txt is 15966 Время:5.77e-05 seconds
+Results of test: test_rl02.txt is 36865 Время:0.000225 seconds
+Results of test: test_rl03.txt is 63681 Время:0.001511 seconds
+Results of test: test_rl04.txt is 55434 Время:0.0010353 seconds
+Results of test: test_rl05.txt is 138688 Время:0.0641712 seconds
+Results of test: test_rl06.txt is 141131 Время:0.0817455 seconds
+Results of test: test_rl07.txt is 204082 Время:0.583264 seconds
+Results of test: test_rl08.txt is 211102 Время:0.59631 seconds
+Results of test: test_rl09.txt is 218990 Время:0.508674 seconds
+
+
+Global Relabel каждые 10000 вершин:
+Results of test: test_rl10.txt is 482613 Время:0.285733 seconds
+Results of test: test_1.txt is 935 Время:1.2e-05 seconds
+Results of test: test_2.txt is 2789 Время:8.13e-05 seconds
+Results of test: test_3.txt is 2e+06 Время:3.9e-06 seconds
+Results of test: test_4.txt is 23 Время:1.46e-05 seconds
+Results of test: test_5.txt is 256 Время:3.63e-05 seconds
+Results of test: test_6.txt is 523 Время:0.0001891 seconds
+Results of test: test_d1.txt is 171 Время:0.0012934 seconds
+Results of test: test_d2.txt is 8023 Время:0.0005621 seconds
+Results of test: test_d3.txt is 9078 Время:0.0172162 seconds
+Results of test: test_d4.txt is 9072 Время:0.044261 seconds
+Results of test: test_d5.txt is 3278 Время:1.05e-05 seconds
+Results of test: test_rd01.txt is 24080 Время:3.39e-05 seconds
+Results of test: test_rd02.txt is 37897 Время:0.0001625 seconds
+Results of test: test_rd03.txt is 68537 Время:0.0040343 seconds
+Results of test: test_rd04.txt is 62599 Время:0.0039691 seconds
+Results of test: test_rd05.txt is 153728 Время:0.0292603 seconds
+Results of test: test_rd06.txt is 224507 Время:0.173138 seconds
+Results of test: test_rd07.txt is 730313 Время:52.4489 seconds
+Results of test: test_rl01.txt is 15966 Время:5.55e-05 seconds
+Салихов Марат Ахатович
+
+
+Results of test: test_rl02.txt is 36865 Время:7.34e-05 seconds
+Results of test: test_rl03.txt is 63681 Время:0.0027443 seconds
+Results of test: test_rl04.txt is 55434 Время:0.0002729 seconds
+Results of test: test_rl05.txt is 138688 Время:0.002009 seconds
+Results of test: test_rl06.txt is 141131 Время:0.0023219 seconds
+Results of test: test_rl07.txt is 204082 Время:0.0094418 seconds
+Results of test: test_rl08.txt is 211102 Время:0.0095791 seconds
+Results of test: test_rl09.txt is 218990 Время:0.0083902 seconds
+Results of test: test_rl10.txt is 482613 Время:0.271659 seconds
+
+
+
+Global Relabel каждые 1000 вершин:
+
+Results of test: test_rd07.txt is 730313 Время:104.266 seconds
+Results of test: test_rl10.txt is 482613 Время:1.79564 seconds
+
+Global Relabel каждые V/2 (где V-количество вершин):
+
+Results of test: test_1.txt is 935 Время:1.96e-05 seconds
+Results of test: test_2.txt is 2789 Время:3e-05 seconds
+Results of test: test_3.txt is 2e+06 Время:4.4e-06 seconds
+Results of test: test_4.txt is 23 Время:2.81e-05 seconds
+Results of test: test_5.txt is 256 Время:4.28e-05 seconds
+Results of test: test_6.txt is 523 Время:0.0002215 seconds
+Results of test: test_d1.txt is 171 Время:0.0003702 seconds
+Results of test: test_d2.txt is 8023 Время:0.0003806 seconds
+Results of test: test_d3.txt is 9078 Время:0.0067057 seconds
+Results of test: test_d4.txt is 9072 Время:0.02838 seconds
+Results of test: test_d5.txt is 3278 Время:1.23e-05 seconds
+Results of test: test_rd01.txt is 24080 Время:6.79e-05 seconds
+Results of test: test_rd02.txt is 37897 Время:0.0001211 seconds
+Results of test: test_rd03.txt is 68537 Время:0.000553 seconds
+Results of test: test_rd04.txt is 62599 Время:0.0005369 seconds
+Results of test: test_rd05.txt is 153728 Время:0.0151202 seconds
+Results of test: test_rd06.txt is 224507 Время:0.0964106 seconds
+Results of test: test_rd07.txt is 730313 Время:60.6132 seconds
+Results of test: test_rl01.txt is 15966 Время:6.51e-05 seconds
+Results of test: test_rl02.txt is 36865 Время:0.0001158 seconds
+Results of test: test_rl03.txt is 63681 Время:0.0004282 seconds
+Results of test: test_rl04.txt is 55434 Время:0.0003143 seconds
+Results of test: test_rl05.txt is 138688 Время:0.0047955 seconds
+Results of test: test_rl06.txt is 141131 Время:0.0052952 seconds
+Results of test: test_rl07.txt is 204082 Время:0.018557 seconds
+Results of test: test_rl08.txt is 211102 Время:0.0178515 seconds
+Results of test: test_rl09.txt is 218990 Время:0.0153018 seconds
+Results of test: test_rl10.txt is 482613 Время:0.706418 seconds

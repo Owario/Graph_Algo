@@ -1,3 +1,8 @@
 ﻿  Alg c++.cpp
-D:\Programms\Alg c++\Alg c++\Alg c++.cpp(55,10): warning C4101: buffer: неиспользованная локальная переменная
+D:\Programms\Alg c++\Alg c++\Alg c++.cpp(51,23): warning C4244: инициализация: преобразование "_Rep" в "double", возможна потеря данных
+          with
+          [
+              _Rep=__int64
+          ]
+D:\Programms\Alg c++\Alg c++\Alg c++.cpp(83,10): warning C4101: buffer: неиспользованная локальная переменная
   Alg c++.vcxproj -> D:\Programms\Alg c++\Debug\Alg c++.exe

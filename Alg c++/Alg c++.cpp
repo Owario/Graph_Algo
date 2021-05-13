@@ -4,15 +4,21 @@
 #include <deque>
 #include <deque>
 #include <ctime>
+#include <chrono>
+#include <climits>
+
+using namespace std::chrono;
 
 using namespace std;
 
 
-int** readFile(int&);
+int** readFile(int&,string);
 
 void printMatrix(int**, int, int);
 
 int algorithm_(int**, int);
+
+void writeinFile(string, double, double);
 
 int** randGen() {
     int** matrix = new int* [100];
@@ -31,18 +37,36 @@ int** randGen() {
 int main() {
     setlocale(LC_ALL, "rus");
     int columns = 0;
-    int** matrix_ = readFile(columns);
-    //int** matrix_ = randGen();
-    //columns=100;
-    //cout << "Исходная матрица" << endl;
-    //printMatrix(matrix_, columns, columns);
+    string filename = "test_rl10.txt";
+    int** matrix_ = readFile(columns,filename);
     cout << endl;
-    cout << "Ответ: "<<algorithm_(matrix_, columns) << endl;
+    auto start = chrono::high_resolution_clock::now();
+    int answer = algorithm_(matrix_, columns);
+
+    auto end = chrono::high_resolution_clock::now();
+    double time_taken =
+        chrono::duration_cast<chrono::nanoseconds>(end - start).count();
+
+    time_taken *= 1e-9;
+    cout << "\nTime taken by function: " <<fixed<< time_taken << " seconds" << endl;
+
+    writeinFile(filename, time_taken,answer);
     return 0;
 }
 
-int** readFile(int& col) {
-    ifstream fin("text1.txt");
+void writeinFile(string name,double time,double answer) 
+{
+    std::ofstream out;
+    out.open("results.txt", std::ios::app);
+    if (out.is_open())
+    {
+        out << "Results of test: " <<name<<" is "<<answer<<" Время:"<<time<<" seconds"<<endl;
+    }
+    out.close();
+}
+
+int** readFile(int& col,string name) {
+    ifstream fin(name);
 
     if (fin.is_open())
         cout << "Файл открыт!\n\n" << endl;
@@ -79,6 +103,7 @@ int** readFile(int& col) {
         matrix[i - 1][j - 1] = flow;
     }
     fin.close();
+    //printMatrix(matrix,col,col);
 
     return matrix;
 }
@@ -99,7 +124,7 @@ int* BFS(int** matrix, int col, int* d, bool type = 1) {
         dec.push_back(col - 1);
     }
     else if (type == 0) {
-        d[0] = 0;
+        d[0] =col;
         dec.push_back(0);
     }
     int max_value = 2 * col;
@@ -146,15 +171,11 @@ void Global_Relabel(int** matrix, int col, int* h) {
 int HLO(int* h, int* e,int col) {
     int max_h=0, max_e=0, vertex=0;
     for (int i = 1;i < col;++i) {
-        if ((h[i] > max_h) && (e[i] > 0)) {
-            vertex = i;
-            max_e = e[i];
-            max_h = h[i];
-        }
-        if ((h[i] == max_h)&&(e[i]>0)) {
-            if (e[i] > max_e) {
+        if (e[i] > 0) {
+            if (h[i] >= max_h){
                 vertex = i;
                 max_e = e[i];
+                max_h = h[i];
             }
         }
     }
@@ -184,9 +205,6 @@ int algorithm_(int** matrix, int col) {
     int* e = new int[col];
 
     unsigned int start_time = clock();
-    Global_Relabel(remain_matrix, col, h);
-
-    h[0] = col;
 
     for (int i = 0;i < col;++i) {
         if (remain_matrix[0][i] > 0) {
@@ -198,35 +216,44 @@ int algorithm_(int** matrix, int col) {
             e[i] = 0;
         }
     }
+    Global_Relabel(remain_matrix, col, h);
 
     int operations,chosen_vertex,count=0,j;
+    int minH, sum_e;
+    int globalrelabe_tick = col / 2;
 
     do{
         chosen_vertex = HLO(h, e, col);
         if (chosen_vertex == col-1) break;
-        j = 0;
-        operations = 1;
-        for (int i = 0;i < col;++i) {
-            if ((remain_matrix[chosen_vertex][i] > 0) && (h[chosen_vertex] - 1 == h[i])) {
-                Push(remain_matrix,chosen_vertex,i,min(remain_matrix[chosen_vertex][i],e[chosen_vertex]),col,e);
-                count++;
-                operations--;
-                break;
+        while (e[chosen_vertex] > 0) {
+            j = 0;
+            operations = 1;
+            for (int i = 0;i < col;++i) {
+                if ((remain_matrix[chosen_vertex][i] > 0) && (h[chosen_vertex] - 1 == h[i])) {
+                    Push(remain_matrix, chosen_vertex, i, min(remain_matrix[chosen_vertex][i], e[chosen_vertex]), col, e);
+                    operations--;
+                    break;
+                }
+            }
+            if (operations == 1) {
+                minH = 2 * col;
+                for (int j = 0;j < col;++j)
+                {
+                    if ((remain_matrix[chosen_vertex][j] > 0) && (h[j] <= minH) && (h[j] >= h[chosen_vertex]))
+                    {
+                        minH = h[j];
+                    }
+                }
+                h[chosen_vertex] = minH + 1;            
             }
         }
-        if (operations==1) {
-            h[chosen_vertex] += 1;
-            count++;
+        count++;
+        if (count==globalrelabe_tick) {
+            count = 0;
+            Global_Relabel(remain_matrix,col,h);
         }
-
-        if (count == 30) {
-            Global_Relabel(remain_matrix, col, h);
-        }
-
     } while (chosen_vertex != col-1);
-    unsigned int end_time = clock();
-    unsigned int search_time = end_time - start_time;
-    cout << "Время работы: " << search_time << endl;
+
     //cout << "Остаточная сеть" << endl;
     //printMatrix(remain_matrix, col, col);
     return e[col - 1];
